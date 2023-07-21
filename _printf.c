@@ -1,5 +1,6 @@
 #include "main.h"
-
+#include <unistd.h>
+void print_buffer(char buffer[], int *buff_ind);
 /**
  * _strlen - Length of a string
  * @s: String
@@ -15,6 +16,8 @@ int _strlen(const char *s)
 
 	return (len);
 }
+
+printer _get_printer(const char *specifier);
 
 /**
  * _printf - Prints function
@@ -64,4 +67,16 @@ int _printf(const char *format, ...)
 	}
 	va_end(valist);
 	return (characters_printed);
+}
+/**
+ * print_buffer - Prints the contents of the buffer if it exist
+ * @buffer: Array of chars
+ * @buff_ind: Index at which to add next char, represents the length.
+ */
+void print_buffer(char buffer[], int *buff_ind)
+{
+	if (*buff_ind > 0)
+		write(1, &buffer[0], *buff_ind);
+
+	*buff_ind = 0;
 }
