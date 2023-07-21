@@ -51,7 +51,7 @@ int _print_uint(va_list args)
 		m /= 10;
 		a[i] = (n / m) % 10;
 	}
-	for (i = 0, summ = 0, count = 0; i < 10; i++)
+	for (i = 0, summ = 0, cpt = 0; i < 10; i++)
 	{
 		summ += a[i];
 		if (summ || i == 9)
