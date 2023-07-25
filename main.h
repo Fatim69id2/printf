@@ -27,7 +27,7 @@ int print_s_not_p(va_list);
 int print_s_rev(va_list);
 int print_rot_13(va_list);
 int print_unsigned_int(va_list);
-int print_oc_8(va_list);//
+int print_oc_8(va_list);
 int print_h_l(va_list);
 int print_h_u(va_list);
 int print_adresse(va_list);
