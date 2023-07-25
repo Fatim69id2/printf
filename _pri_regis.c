@@ -10,19 +10,19 @@ printer _get_printer(const char *specifier)
 {
 	int cpt;
 	static printer printers[] = {
-		{"c", _print_char},
-		{"s", _print_str},
-		{"d", _print_decimal},
-		{"i", _print_int},
-		{"b", _print_binary},
-		{"S", _print_str_nonprintable},
-		{"r", _print_str_reverse},
-		{"R", _print_rot13},
-		{"u", _print_uint},
-		{"o", _print_octal},
-		{"x", _print_hex_lower},
-		{"X", _print_hex_upper},
-		{"p", _print_pointer},
+		{"c", print_char},
+		{"s", print_strr},
+		{"d", print_dc_10},
+		{"i", print_integer},
+		{"b", print_bin},
+		{"S", print_s_not_p},
+		{"r", print_s_rev},
+		{"R", print_rot_13},
+		{"u", print_unsigned_int},
+		{"o", print_oc_8},
+		{"x", print_h_l},
+		{"X", print_h_u},
+		{"p", print_adresse},
 		{NULL, NULL}
 	};
 
